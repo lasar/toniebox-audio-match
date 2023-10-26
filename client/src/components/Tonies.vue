@@ -1,10 +1,10 @@
 <template>
-  <select class="form-control" @change="tonieSelected">
-    <option selected disabled>Wähle deinen Tonie</option>
-    <option v-for="tonie in tonies" :key="tonie.id" :value="tonie.id">
-      {{ tonie.name }}
-    </option>
-  </select>
+  <ul>
+    <li v-for="tonie in tonies" @click="tonieSelected" :key="tonie.id">
+      <img :src="tonie.image" />
+      <span>{{ tonie.name }}</span>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -22,3 +22,24 @@ export default {
   },
 };
 </script>
+
+<style>
+ul {
+  list-style: none;
+  padding: 0 10px;
+}
+
+li {
+  display: inline-block;
+  max-width: 33%;
+  text-align: left;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+span {
+  font-size: small;
+}</style>
