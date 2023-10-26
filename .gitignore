@@ -354,3 +354,6 @@ dmypy.json
 .pytype/
 
 # End of https://www.toptal.com/developers/gitignore/api/node,python,pycharm
+
+# toniebox-audio-match
+albumart/
