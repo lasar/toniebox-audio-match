@@ -5,7 +5,7 @@
         <div class="container d-flex justify-content-between">
           <div class="navbar-brand d-flex align-items-center">
             <strong>
-              Tonies für {{ appTitle }}
+              Tonies
             </strong>
           </div>
         </div>
@@ -32,14 +32,3 @@
   }
 }
 </style>
-
-<script>
-export default {
-  data() {
-    console.log(process.env);
-    return {
-      appTitle: 'LLL', // process.env.VUE_APP_TITLE
-    };
-  },
-};
-</script>
