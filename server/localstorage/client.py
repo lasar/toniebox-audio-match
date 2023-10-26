@@ -22,6 +22,8 @@ def audiobooks(root: Path) -> Set[Path]:
     all_dirs = root.glob("**/")
     all_audiobooks = set()
     for dir in all_dirs:
+        if dir.name.startswith("@"):
+            continue
         if dir.parent in all_audiobooks:
             all_audiobooks.remove(dir.parent)
         all_audiobooks.add(dir)
